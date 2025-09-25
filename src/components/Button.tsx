@@ -1,7 +1,14 @@
-import { JSX } from "react";
+import { ButtonHTMLAttributes, JSX, ReactNode } from "react";
 
-export function Button(): JSX.Element {
+interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+  children: ReactNode;
+}
+
+export function Button({children, ...rest}: ButtonProps): JSX.Element {
   return (
-    <button></button>
+    <button 
+      className="rounded-md bg-[var(--primary)] text-white w-full py-5 text-2xl"
+      {...rest}
+    >{children}</button>
   )
 }
