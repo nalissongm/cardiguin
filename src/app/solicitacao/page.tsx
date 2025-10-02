@@ -1,10 +1,10 @@
 "use client"
-import { Button } from "@/components/Button";
+import { Button } from '@/components/Button';
 import Image from 'next/image'
-import { redirect, RedirectType } from "next/navigation";
 
 export default function Home() {
   
+
   return (
     <main className="flex flex-col h-lvh justify-center max-w-[317px] w-full mx-auto">
       <Image alt="illustration" src="./illust.svg" width="300" height="300" className="mx-auto"/>
@@ -14,10 +14,9 @@ export default function Home() {
           <p className="text-base">Peça agora seu crachá e acompanhe todo o processo.</p>
         </div>
         <div className="flex flex-col gap-5">
-          <Button onClick={() => redirect('/form', RedirectType.push)}>Fazer pedido</Button>
+          <Button onClick={() => alert("asd")}>Fazer pedido</Button>
           <Button
             variant="text"
-            onClick={() => redirect('/meuscrachas', RedirectType.push)}
             >
             Meus pedidos
           </Button>
